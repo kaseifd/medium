@@ -1,0 +1,129 @@
+.home_news {
+    display: flex;
+    justify-content: center;
+    padding: $base * 5 0;
+
+    .home_news_holder {
+        width: 100%;
+        max-width: 1080px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: $base * 12;
+
+        .news {
+            .news_item {
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                align-items: center;
+                margin-bottom: $base * 7;
+
+                .news_item_content {
+                    margin-right: $base * 3;
+                    &.news_item_nostar {
+                        .star {
+                            display: none;
+                        }
+                    }
+                    .author {
+                        display: flex;
+                        margin-bottom: $base;
+                        .pic {
+                            margin-right: $base;
+                            width: 25px;
+                            height: 25px;
+                            border-radius: 50%;
+                            overflow: hidden;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                object-position: center;
+                            }
+                        }
+                        .name {
+                            font-size: $base * 1.8;
+                        }
+                    }
+                    .title {
+                        font-size: $base * 3;
+                        margin-bottom: $base;
+                        line-height: $base * 3.5;
+                    }
+                    p {
+                        margin-bottom: $base;
+                        line-height: $base * 2.5;
+                    }
+                    .meta_holder {
+                        display: flex;
+                        justify-content: space-between;
+
+                        .meta {
+                            display: flex;
+                            color: rgb(129, 129, 129);
+                            font-size: 0.9rem;
+
+                            .separator {
+                                margin: 0 $base;
+                                font-size: 0.2rem;
+                            }
+
+                            .star {
+                                margin-left: $base * 2;
+                            }
+                        }
+                        .bookmark {
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .news_item_image {
+                    img {
+                        width: 200px;
+                    }
+                }
+            }
+        }
+        .tag_cloud {
+            .tag_cloud_holder {
+                border-bottom: solid 1px rgb(211, 211, 211);
+                .label {
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: $base * 1.8;
+                    letter-spacing: 0.04rem;
+                }
+                .tag_cloud_grid {
+                    margin-bottom: $base * 2.5;
+                    .tag_cloud_items {
+                        padding: 0;
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin-top: $base * 2;
+
+                        .tag {
+                            list-style: none;
+                            padding: $base * 0.5 $base * 2;
+                            border-radius: 3px;
+                            border: solid 1px rgb(216, 216, 216);
+                            margin-bottom: $base;
+                            margin-right: $base;
+
+                            color: rgb(66, 66, 66);
+                            user-select: none;
+
+                            a {
+                                color: inherit;
+                                font-size: $base * 1.65;
+                            }
+                        }
+                    }
+                    a {
+                        color: rgb(40, 158, 45);
+                        font-size: $base * 1.8;
+                    }
+                }
+            }
+        }
+    }
+}
